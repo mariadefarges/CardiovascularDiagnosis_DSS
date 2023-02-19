@@ -5,13 +5,14 @@
 package pojos;
 
 import java.io.Serializable;
+import java.sql.Date;
 import java.util.Objects;
 
 /**
  *
  * @author mariadefarges
  */
-public class Doctor implements Serializable {
+public class Patient implements Serializable{
     
     private static final long serialVersionUID = -1L;
     
@@ -19,22 +20,20 @@ public class Doctor implements Serializable {
     private String name;
     private String surname;
     private String gender;
-    private String hospital;
-    private final String email;
-    private String password;
+    private final Date birthDate;
+    private String weight;
+    private final String bloodType;
+    private String background;
 
-    public Doctor(Integer patientId, String name, String surname, String gender, String hospital, String email, String password) {
+    public Patient(Integer patientId, String name, String surname, String gender, Date birthDate, String weight, String bloodType, String background) {
         this.patientId = patientId;
         this.name = name;
         this.surname = surname;
         this.gender = gender;
-        this.hospital = hospital;
-        this.email = email;
-        this.password = password;
-    }
-
-    public Integer getPatientId() {
-        return patientId;
+        this.birthDate = birthDate;
+        this.weight = weight;
+        this.bloodType = bloodType;
+        this.background = background;
     }
 
     public String getName() {
@@ -61,32 +60,33 @@ public class Doctor implements Serializable {
         this.gender = gender;
     }
 
-    public String getHospital() {
-        return hospital;
+    public String getWeight() {
+        return weight;
     }
 
-    public void setHospital(String hospital) {
-        this.hospital = hospital;
+    public void setWeight(String weight) {
+        this.weight = weight;
     }
 
-    public String getPassword() {
-        return password;
+    public String getBackground() {
+        return background;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setBackground(String background) {
+        this.background = background;
     }
 
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 83 * hash + Objects.hashCode(this.patientId);
-        hash = 83 * hash + Objects.hashCode(this.name);
-        hash = 83 * hash + Objects.hashCode(this.surname);
-        hash = 83 * hash + Objects.hashCode(this.gender);
-        hash = 83 * hash + Objects.hashCode(this.hospital);
-        hash = 83 * hash + Objects.hashCode(this.email);
-        hash = 83 * hash + Objects.hashCode(this.password);
+        hash = 67 * hash + Objects.hashCode(this.patientId);
+        hash = 67 * hash + Objects.hashCode(this.name);
+        hash = 67 * hash + Objects.hashCode(this.surname);
+        hash = 67 * hash + Objects.hashCode(this.gender);
+        hash = 67 * hash + Objects.hashCode(this.birthDate);
+        hash = 67 * hash + Objects.hashCode(this.weight);
+        hash = 67 * hash + Objects.hashCode(this.bloodType);
+        hash = 67 * hash + Objects.hashCode(this.background);
         return hash;
     }
 
@@ -101,7 +101,7 @@ public class Doctor implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Doctor other = (Doctor) obj;
+        final Patient other = (Patient) obj;
         if (!Objects.equals(this.name, other.name)) {
             return false;
         }
@@ -111,25 +111,27 @@ public class Doctor implements Serializable {
         if (!Objects.equals(this.gender, other.gender)) {
             return false;
         }
-        if (!Objects.equals(this.hospital, other.hospital)) {
+        if (!Objects.equals(this.weight, other.weight)) {
             return false;
         }
-        if (!Objects.equals(this.email, other.email)) {
+        if (!Objects.equals(this.bloodType, other.bloodType)) {
             return false;
         }
-        if (!Objects.equals(this.password, other.password)) {
+        if (!Objects.equals(this.background, other.background)) {
             return false;
         }
-        return Objects.equals(this.patientId, other.patientId);
+        if (!Objects.equals(this.patientId, other.patientId)) {
+            return false;
+        }
+        return Objects.equals(this.birthDate, other.birthDate);
     }
 
     @Override
     public String toString() {
-        return "Doctor{" + "patientId=" + patientId + ", name=" + name + ", surname=" + surname + ", gender=" + gender + ", hospital=" + hospital + ", email=" + email + ", password=" + password + '}';
+        return "Patient{" + "patientId=" + patientId + ", name=" + name + ", surname=" + surname + ", gender=" + gender + ", birthDate=" + birthDate + ", weight=" + weight + ", bloodType=" + bloodType + ", background=" + background + '}';
     }
     
     
-
 
     
 }
