@@ -5,6 +5,7 @@
 package pojos;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -22,6 +23,7 @@ public class Doctor implements Serializable {
     private String hospital;
     private final String email;
     private String password;
+    private List<Patient> patients;
 
     public Doctor(Integer patientId, String name, String surname, String gender, String hospital, String email, String password) {
         this.patientId = patientId;

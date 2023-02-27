@@ -30,6 +30,10 @@ public class Condition {
     
     private boolean neck_shoulder_back_pain;
     private boolean palpitations;
+
+    public Condition() {
+        this.conditionId = null;
+    }
     
    
    

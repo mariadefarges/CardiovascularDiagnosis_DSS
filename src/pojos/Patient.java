@@ -24,6 +24,8 @@ public class Patient implements Serializable{
     private String weight;
     private final String bloodType;
     private String background;
+    private Condition conditions;
+    private  Disease diease;
 
     public Patient(Integer patientId, String name, String surname, String gender, Date birthDate, String weight, String bloodType, String background) {
         this.patientId = patientId;
