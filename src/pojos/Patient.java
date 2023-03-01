@@ -8,6 +8,7 @@ import java.io.Serializable;
 import java.sql.Date;
 import java.util.Objects;
 
+
 /**
  *
  * @author mariadefarges
@@ -16,16 +17,16 @@ public class Patient implements Serializable{
     
     private static final long serialVersionUID = -1L;
     
-    private final Integer patientId;
+    private int patientId;
     private String name;
     private String surname;
     private String gender;
-    private final Date birthDate;
+    private Date birthDate;
     private String weight;
-    private final String bloodType;
+    private String bloodType;
     private String background;
     private Condition conditions;
-    private  Disease diease;
+    private  Disease disease;
 
     public Patient(Integer patientId, String name, String surname, String gender, Date birthDate, String weight, String bloodType, String background) {
         this.patientId = patientId;
@@ -36,6 +37,37 @@ public class Patient implements Serializable{
         this.weight = weight;
         this.bloodType = bloodType;
         this.background = background;
+    }
+    
+    
+    public Patient(boolean chestpain, boolean sweating, boolean nausea, boolean legs_pain, 
+            boolean skin_changes, boolean decreased_pulse, boolean legs_swealing, 
+            boolean shortnessofbreath, boolean tiredness, boolean increased_pulse, 
+            boolean headache, boolean dizziness, boolean neck_shoulder_back_pain, boolean palpitations){
+        this.conditions = new Condition();
+        this.disease = new Disease();
+        this.conditions.setChestpain(chestpain);
+        this.conditions.setSweating(sweating);
+        this.conditions.setNausea(nausea);
+        this.conditions.setLegs_pain(legs_pain);
+        this.conditions.setSkin_changes(skin_changes);
+        this.conditions.setDecreased_pulse(decreased_pulse);
+        this.conditions.setLegs_swealing(legs_swealing);
+        this.conditions.setShortnessofbreath(shortnessofbreath);
+        this.conditions.setTiredness(tiredness);
+        this.conditions.setIncreased_pulse(increased_pulse);
+        this.conditions.setHeadache(headache);
+        this.conditions.setDizziness(dizziness);
+        this.conditions.setNeck_shoulder_back_pain(neck_shoulder_back_pain);
+        this.conditions.setPalpitations(palpitations);
+    }
+
+    public Condition getConditions() {
+        return conditions;
+    }
+
+    public Disease getDisease() {
+        return disease;
     }
 
     public String getName() {

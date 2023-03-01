@@ -30,6 +30,16 @@ public class Disease {
         this.stroke = stroke;
         this.arrythmia = arrythmia;
     }
+    
+    public Disease(){
+                this.myocardialInfarction = 0;
+        this.heartFailure = 0;
+        this.pArterialSisease = 0;
+        this.heartBurn = 0;
+        this.hypertension = 0;
+        this.stroke = 0;
+        this.arrythmia = 0;
+    }
 
     public int getMyocardialInfarction() {
         return myocardialInfarction;
