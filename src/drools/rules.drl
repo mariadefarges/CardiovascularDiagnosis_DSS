@@ -19,7 +19,7 @@ import pojos.*
 rule "Chest pain 1"
     dialect "java"
     when
-        p : Patient( p.getCondition().isChestPain() == true )
+        p : Patient( p.getConditions().isChestpain() == true )
     then
        p.getDisease().setMyocardialInfarction(p.getDisease().getMyocardialInfarction() + 0.5);
         System.out.println("Rule 1 Chest Pain applied over " + p);

@@ -13,15 +13,15 @@ import java.util.logging.Logger;
  */
 public class Disease {
     
-    private int myocardialInfarction;
-    private int heartFailure ;
-    private int pArterialSisease;
-    private int heartBurn;
-    private int hypertension;
-    private int stroke;
-    private int arrythmia;
+    private double myocardialInfarction;
+    private double heartFailure ;
+    private double pArterialSisease;
+    private double heartBurn;
+    private double hypertension;
+    private double stroke;
+    private double arrythmia;
 
-    public Disease(int myocardialInfarction, int heartFailure, int pArterialSisease, int heartBurn, int hypertension, int stroke, int arrythmia) {
+    public Disease(double myocardialInfarction, double heartFailure, double pArterialSisease, double heartBurn, double hypertension, double stroke, double arrythmia) {
         this.myocardialInfarction = myocardialInfarction;
         this.heartFailure = heartFailure;
         this.pArterialSisease = pArterialSisease;
@@ -32,7 +32,7 @@ public class Disease {
     }
     
     public Disease(){
-                this.myocardialInfarction = 0;
+        this.myocardialInfarction = 0;
         this.heartFailure = 0;
         this.pArterialSisease = 0;
         this.heartBurn = 0;
@@ -41,11 +41,11 @@ public class Disease {
         this.arrythmia = 0;
     }
 
-    public int getMyocardialInfarction() {
+    public double getMyocardialInfarction() {
         return myocardialInfarction;
     }
 
-    public int getHeartFailure() {
+    public double getHeartFailure() {
         return heartFailure;
     }
 
@@ -54,18 +54,7 @@ public class Disease {
         return "Disease{" + "myocardialInfarction=" + myocardialInfarction + ", heartFailure=" + heartFailure + ", pArterialSisease=" + pArterialSisease + ", heartBurn=" + heartBurn + ", hypertension=" + hypertension + ", stroke=" + stroke + ", arrythmia=" + arrythmia + '}';
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 41 * hash + this.myocardialInfarction;
-        hash = 41 * hash + this.heartFailure;
-        hash = 41 * hash + this.pArterialSisease;
-        hash = 41 * hash + this.heartBurn;
-        hash = 41 * hash + this.hypertension;
-        hash = 41 * hash + this.stroke;
-        hash = 41 * hash + this.arrythmia;
-        return hash;
-    }
+   
 
     @Override
     public boolean equals(Object obj) {
@@ -100,54 +89,68 @@ public class Disease {
         return this.arrythmia == other.arrythmia;
     }
 
-    public void setMyocardialInfarction(int myocardialInfarction) {
+    public void setMyocardialInfarction(double myocardialInfarction) {
         this.myocardialInfarction = myocardialInfarction;
     }
 
-    public void setHeartFailure(int heartFailure) {
+    public void setHeartFailure(double heartFailure) {
         this.heartFailure = heartFailure;
     }
 
-    public void setpArterialSisease(int pArterialSisease) {
+    public void setpArterialSisease(double pArterialSisease) {
         this.pArterialSisease = pArterialSisease;
     }
 
-    public void setHeartBurn(int heartBurn) {
+    public void setHeartBurn(double heartBurn) {
         this.heartBurn = heartBurn;
     }
 
-    public void setHypertension(int hypertension) {
+    public void setHypertension(double hypertension) {
         this.hypertension = hypertension;
     }
 
-    public void setStroke(int stroke) {
+    public void setStroke(double stroke) {
         this.stroke = stroke;
     }
 
-    public void setArrythmia(int arrythmia) {
+    public void setArrythmia(double arrythmia) {
         this.arrythmia = arrythmia;
     }
 
-    public int getpArterialSisease() {
+    public double getpArterialSisease() {
         return pArterialSisease;
     }
 
-    public int getHeartBurn() {
+    public double getHeartBurn() {
         return heartBurn;
     }
 
-    public int getHypertension() {
+    public double getHypertension() {
         return hypertension;
     }
 
-    public int getStroke() {
+    public double getStroke() {
         return stroke;
     }
 
-    public int getArrythmia() {
+    public double getArrythmia() {
         return arrythmia;
     }
-    
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.myocardialInfarction) ^ (Double.doubleToLongBits(this.myocardialInfarction) >>> 32));
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.heartFailure) ^ (Double.doubleToLongBits(this.heartFailure) >>> 32));
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.pArterialSisease) ^ (Double.doubleToLongBits(this.pArterialSisease) >>> 32));
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.heartBurn) ^ (Double.doubleToLongBits(this.heartBurn) >>> 32));
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.hypertension) ^ (Double.doubleToLongBits(this.hypertension) >>> 32));
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.stroke) ^ (Double.doubleToLongBits(this.stroke) >>> 32));
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.arrythmia) ^ (Double.doubleToLongBits(this.arrythmia) >>> 32));
+        return hash;
+    }
+
+   
     
 
 

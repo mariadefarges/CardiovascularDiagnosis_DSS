@@ -35,7 +35,7 @@ public class Condition {
         this.conditionId = null;
     }
     
-        public Integer getConditionId() {
+    public Integer getConditionId() {
         return conditionId;
     }
 
