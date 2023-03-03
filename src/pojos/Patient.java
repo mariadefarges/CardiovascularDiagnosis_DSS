@@ -26,7 +26,7 @@ public class Patient implements Serializable{
     private String bloodType;
     private String background;
     private Condition conditions;
-    private  Disease disease;
+    private Disease disease;
 
     public Patient(Integer patientId, String name, String surname, String gender, Date birthDate, String weight, String bloodType, String background) {
         this.patientId = patientId;
@@ -40,26 +40,31 @@ public class Patient implements Serializable{
     }
     
     
-    public Patient(boolean chestpain, boolean sweating, boolean nausea, boolean legs_pain, 
-            boolean skin_changes, boolean decreased_pulse, boolean legs_swealing, 
-            boolean shortnessofbreath, boolean tiredness, boolean increased_pulse, 
-            boolean headache, boolean dizziness, boolean neck_shoulder_back_pain, boolean palpitations){
+    public Patient(boolean chestPain, boolean sweating, boolean nausea, boolean legsPain, 
+            boolean skinChanges, boolean decreasedPulse, boolean swellingLegs, 
+            boolean shortnessOfBreath, boolean fatigue, boolean increasedPulse, 
+            boolean headache, boolean dizziness, boolean upperBodyPain, boolean palpitations, boolean temperatureChanges,
+            boolean highBloodPressure, boolean irregularHeartBeat, boolean weakness){
         this.conditions = new Condition();
         this.disease = new Disease();
-        this.conditions.setChestpain(chestpain);
+        this.conditions.setChestPain(chestPain);
         this.conditions.setSweating(sweating);
         this.conditions.setNausea(nausea);
-        this.conditions.setLegs_pain(legs_pain);
-        this.conditions.setSkin_changes(skin_changes);
-        this.conditions.setDecreased_pulse(decreased_pulse);
-        this.conditions.setLegs_swealing(legs_swealing);
-        this.conditions.setShortnessofbreath(shortnessofbreath);
-        this.conditions.setTiredness(tiredness);
-        this.conditions.setIncreased_pulse(increased_pulse);
+        this.conditions.setLegsPain(legsPain);
+        this.conditions.setSkinChanges(skinChanges);
+        this.conditions.setDecreasedPulse(decreasedPulse);
+        this.conditions.setSwellingLegs(swellingLegs);
+        this.conditions.setShortnessOfBreath(shortnessOfBreath);
+        this.conditions.setFatigue(fatigue);
+        this.conditions.setIncreasedPulse(increasedPulse);
         this.conditions.setHeadache(headache);
         this.conditions.setDizziness(dizziness);
-        this.conditions.setNeck_shoulder_back_pain(neck_shoulder_back_pain);
+        this.conditions.setUpperBodyPain(upperBodyPain);
         this.conditions.setPalpitations(palpitations);
+        this.conditions.setTemperatureChanges(temperatureChanges);
+        this.conditions.setHighBloodPressure(highBloodPressure);
+        this.conditions.setIrregularHeartBeat(irregularHeartBeat);
+        this.conditions.setWeakness(weakness);
     }
 
     public Condition getConditions() {

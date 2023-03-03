@@ -9,26 +9,71 @@ package pojos;
  * @author mariadefarges
  */
 public class Condition {
+    
 
     private final Integer conditionId;
     
-    private boolean chestpain;
+    private boolean chestPain;
     private boolean sweating;
     private boolean nausea;
     
-    private boolean legs_pain;
-    private boolean skin_changes;
-    private boolean decreased_pulse;
+    private boolean legsPain;
+    private boolean skinChanges;
+    private boolean decreasedPulse;
     
-    private boolean legs_swealing;
-    private boolean shortnessofbreath;
-    private boolean tiredness;
+    private boolean swellingLegs;
+    private boolean shortnessOfBreath;
+    private boolean fatigue;
     
-    private boolean increased_pulse;
+    private boolean increasedPulse;
     private boolean headache;
     private boolean dizziness;
     
-    private boolean neck_shoulder_back_pain;
+    private boolean upperBodyPain;
+    private boolean temperatureChanges;
+    private boolean highBloodPressure;
+    private boolean irregularHeartBeat;
+    private boolean weakness;
+
+    public void setTemperatureChanges(boolean temperatureChanges) {
+        this.temperatureChanges = temperatureChanges;
+    }
+
+    public boolean isTemperatureChanges() {
+        return temperatureChanges;
+    }
+
+    public boolean isChestPain() {
+        return chestPain;
+    }
+
+    public boolean isLegsPain() {
+        return legsPain;
+    }
+
+    public boolean isSkinChanges() {
+        return skinChanges;
+    }
+
+    public boolean isDecreasedPulse() {
+        return decreasedPulse;
+    }
+
+    public boolean isSwellingLegs() {
+        return swellingLegs;
+    }
+
+    public boolean isShortnessOfBreath() {
+        return shortnessOfBreath;
+    }
+
+    public boolean isIncreasedPulse() {
+        return increasedPulse;
+    }
+
+    public boolean isUpperBodyPain() {
+        return upperBodyPain;
+    }
     private boolean palpitations;
 
     public Condition() {
@@ -39,10 +84,6 @@ public class Condition {
         return conditionId;
     }
 
-    public boolean isChestpain() {
-        return chestpain;
-    }
-
     public boolean isSweating() {
         return sweating;
     }
@@ -51,32 +92,8 @@ public class Condition {
         return nausea;
     }
 
-    public boolean isLegs_pain() {
-        return legs_pain;
-    }
-
-    public boolean isSkin_changes() {
-        return skin_changes;
-    }
-
-    public boolean isDecreased_pulse() {
-        return decreased_pulse;
-    }
-
-    public boolean isLegs_swealing() {
-        return legs_swealing;
-    }
-
-    public boolean isShortnessofbreath() {
-        return shortnessofbreath;
-    }
-
-    public boolean isTiredness() {
-        return tiredness;
-    }
-
-    public boolean isIncreased_pulse() {
-        return increased_pulse;
+    public boolean isFatigue() {
+        return fatigue;
     }
 
     public boolean isHeadache() {
@@ -87,16 +104,8 @@ public class Condition {
         return dizziness;
     }
 
-    public boolean isNeck_shoulder_back_pain() {
-        return neck_shoulder_back_pain;
-    }
-
     public boolean isPalpitations() {
         return palpitations;
-    }
-
-    public void setChestpain(boolean chestpain) {
-        this.chestpain = chestpain;
     }
 
     public void setSweating(boolean sweating) {
@@ -107,32 +116,8 @@ public class Condition {
         this.nausea = nausea;
     }
 
-    public void setLegs_pain(boolean legs_pain) {
-        this.legs_pain = legs_pain;
-    }
-
-    public void setSkin_changes(boolean skin_changes) {
-        this.skin_changes = skin_changes;
-    }
-
-    public void setDecreased_pulse(boolean decreased_pulse) {
-        this.decreased_pulse = decreased_pulse;
-    }
-
-    public void setLegs_swealing(boolean legs_swealing) {
-        this.legs_swealing = legs_swealing;
-    }
-
-    public void setShortnessofbreath(boolean shortnessofbreath) {
-        this.shortnessofbreath = shortnessofbreath;
-    }
-
-    public void setTiredness(boolean tiredness) {
-        this.tiredness = tiredness;
-    }
-
-    public void setIncreased_pulse(boolean increased_pulse) {
-        this.increased_pulse = increased_pulse;
+    public void setFatigue(boolean fatigue) {
+        this.fatigue = fatigue;
     }
 
     public void setHeadache(boolean headache) {
@@ -143,23 +128,64 @@ public class Condition {
         this.dizziness = dizziness;
     }
 
-    public void setNeck_shoulder_back_pain(boolean neck_shoulder_back_pain) {
-        this.neck_shoulder_back_pain = neck_shoulder_back_pain;
-    }
-
     public void setPalpitations(boolean palpitations) {
         this.palpitations = palpitations;
     }
     
-    
-    
-    
-   
-   
-    
-    
-    
-    
-    
-    
+        public void setChestPain(boolean chestPain) {
+        this.chestPain = chestPain;
+    }
+
+    public void setLegsPain(boolean legsPain) {
+        this.legsPain = legsPain;
+    }
+
+    public void setSkinChanges(boolean skinChanges) {
+        this.skinChanges = skinChanges;
+    }
+
+    public void setDecreasedPulse(boolean decreasedPulse) {
+        this.decreasedPulse = decreasedPulse;
+    }
+
+    public void setSwellingLegs(boolean swellingLegs) {
+        this.swellingLegs = swellingLegs;
+    }
+
+    public void setShortnessOfBreath(boolean shortnessOfBreath) {
+        this.shortnessOfBreath = shortnessOfBreath;
+    }
+
+    public void setIncreasedPulse(boolean increasedPulse) {
+        this.increasedPulse = increasedPulse;
+    }
+
+    public void setUpperBodyPain(boolean upperBodyPain) {
+        this.upperBodyPain = upperBodyPain;
+    }
+
+    public void setHighBloodPressure(boolean highBloodPressure) {
+        this.highBloodPressure = highBloodPressure;
+    }
+
+    public void setIrregularHeartBeat(boolean irregularHeartBeat) {
+        this.irregularHeartBeat = irregularHeartBeat;
+    }
+
+    public void setWeakness(boolean weakness) {
+        this.weakness = weakness;
+    }
+
+    public boolean isHighBloodPressure() {
+        return highBloodPressure;
+    }
+
+    public boolean isIrregularHeartBeat() {
+        return irregularHeartBeat;
+    }
+
+    public boolean isWeakness() {
+        return weakness;
+    }
+ 
 }

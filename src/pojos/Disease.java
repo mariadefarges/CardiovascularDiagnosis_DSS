@@ -15,16 +15,16 @@ public class Disease {
     
     private double myocardialInfarction;
     private double heartFailure ;
-    private double pArterialSisease;
+    private double pArterialDisease;
     private double heartBurn;
     private double hypertension;
     private double stroke;
     private double arrythmia;
 
-    public Disease(double myocardialInfarction, double heartFailure, double pArterialSisease, double heartBurn, double hypertension, double stroke, double arrythmia) {
+    public Disease(double myocardialInfarction, double heartFailure, double pArterialDisease, double heartBurn, double hypertension, double stroke, double arrythmia) {
         this.myocardialInfarction = myocardialInfarction;
         this.heartFailure = heartFailure;
-        this.pArterialSisease = pArterialSisease;
+        this.pArterialDisease = pArterialDisease;
         this.heartBurn = heartBurn;
         this.hypertension = hypertension;
         this.stroke = stroke;
@@ -34,7 +34,7 @@ public class Disease {
     public Disease(){
         this.myocardialInfarction = 0;
         this.heartFailure = 0;
-        this.pArterialSisease = 0;
+        this.pArterialDisease = 0;
         this.heartBurn = 0;
         this.hypertension = 0;
         this.stroke = 0;
@@ -51,7 +51,7 @@ public class Disease {
 
     @Override
     public String toString() {
-        return "Disease{" + "myocardialInfarction=" + myocardialInfarction + ", heartFailure=" + heartFailure + ", pArterialSisease=" + pArterialSisease + ", heartBurn=" + heartBurn + ", hypertension=" + hypertension + ", stroke=" + stroke + ", arrythmia=" + arrythmia + '}';
+        return "Disease{" + "myocardialInfarction=" + myocardialInfarction + ", heartFailure=" + heartFailure + ", pArterialSisease=" + pArterialDisease + ", heartBurn=" + heartBurn + ", hypertension=" + hypertension + ", stroke=" + stroke + ", arrythmia=" + arrythmia + '}';
     }
 
    
@@ -74,7 +74,7 @@ public class Disease {
         if (this.heartFailure != other.heartFailure) {
             return false;
         }
-        if (this.pArterialSisease != other.pArterialSisease) {
+        if (this.pArterialDisease != other.pArterialDisease) {
             return false;
         }
         if (this.heartBurn != other.heartBurn) {
@@ -97,8 +97,8 @@ public class Disease {
         this.heartFailure = heartFailure;
     }
 
-    public void setpArterialSisease(double pArterialSisease) {
-        this.pArterialSisease = pArterialSisease;
+    public void setpArterialDisease(double pArterialDisease) {
+        this.pArterialDisease = pArterialDisease;
     }
 
     public void setHeartBurn(double heartBurn) {
@@ -117,8 +117,8 @@ public class Disease {
         this.arrythmia = arrythmia;
     }
 
-    public double getpArterialSisease() {
-        return pArterialSisease;
+    public double getpArterialDisease() {
+        return pArterialDisease;
     }
 
     public double getHeartBurn() {
@@ -142,7 +142,7 @@ public class Disease {
         int hash = 5;
         hash = 29 * hash + (int) (Double.doubleToLongBits(this.myocardialInfarction) ^ (Double.doubleToLongBits(this.myocardialInfarction) >>> 32));
         hash = 29 * hash + (int) (Double.doubleToLongBits(this.heartFailure) ^ (Double.doubleToLongBits(this.heartFailure) >>> 32));
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.pArterialSisease) ^ (Double.doubleToLongBits(this.pArterialSisease) >>> 32));
+        hash = 29 * hash + (int) (Double.doubleToLongBits(this.pArterialDisease) ^ (Double.doubleToLongBits(this.pArterialDisease) >>> 32));
         hash = 29 * hash + (int) (Double.doubleToLongBits(this.heartBurn) ^ (Double.doubleToLongBits(this.heartBurn) >>> 32));
         hash = 29 * hash + (int) (Double.doubleToLongBits(this.hypertension) ^ (Double.doubleToLongBits(this.hypertension) >>> 32));
         hash = 29 * hash + (int) (Double.doubleToLongBits(this.stroke) ^ (Double.doubleToLongBits(this.stroke) >>> 32));

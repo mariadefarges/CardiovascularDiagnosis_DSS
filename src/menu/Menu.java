@@ -24,32 +24,49 @@ public class Menu {
     
     
     public static void execute(KieContainer kc) {
-        boolean chestpain = true;
+        
         boolean sweating = true;
         boolean nausea = true;
     
-        boolean legs_pain = false;
-        boolean skin_changes = false;
-        boolean decreased_pulse = false;
+        boolean legsPain = true;
+        boolean skinChanges = true;
+        boolean decreasedPulse = true;
     
-        boolean legs_swealing = false;
-        boolean shortnessofbreath = true;
-        boolean tiredness = false;
+        
+        boolean shortnessOfBreath = true;
+        boolean tiredness = true;
     
-        boolean increased_pulse = false;
-        boolean headache = false;
-        boolean dizziness = false;
+        boolean increasedPulse = true;
+        boolean headache = true;
+        boolean dizziness = true;
     
-        boolean neck_shoulder_back_pain = false;
-        boolean palpitations = false;
+        boolean neckShoulderBackPain = true;
+        boolean palpitations = true;
+        boolean temperatureChanges = true;
+        boolean highBloodPressure = true;
+        
+        boolean weakness = true;
+        
+        //constraint attributes
+        boolean irregularHeartBeat = true;
+        boolean legsSwealing = true;
+        boolean chestPain = true;
         
         KieSession ksession = kc.newKieSession("CardiovascularDiagnosisKS");
-        Patient p1 = new Patient(chestpain, sweating, nausea, legs_pain, skin_changes, decreased_pulse, legs_swealing,
-                        shortnessofbreath, tiredness, increased_pulse, headache, dizziness, neck_shoulder_back_pain, palpitations);
+        Patient p1 = new Patient(chestPain, sweating, nausea, legsPain, skinChanges, decreasedPulse, legsSwealing,
+                        shortnessOfBreath, tiredness, increasedPulse, headache, dizziness, neckShoulderBackPain, palpitations,
+                        temperatureChanges, highBloodPressure, irregularHeartBeat, weakness);
         
         ksession.insert(p1);
         ksession.fireAllRules();
-        System.out.println(p1.getDisease().getMyocardialInfarction());
+        System.out.println("Myocardial Infarction: " + p1.getDisease().getMyocardialInfarction());
+        System.out.println("Heart Failure: " + p1.getDisease().getHeartFailure());
+        System.out.println("Peripheral Arterial Disease: " + p1.getDisease().getpArterialDisease());
+        System.out.println("Heart Burn: " + p1.getDisease().getHeartBurn());
+        System.out.println("Stroke: " + p1.getDisease().getStroke());
+        System.out.println("Arrythmia: " + p1.getDisease().getArrythmia());
+        System.out.println("Hypertension: " + p1.getDisease().getHypertension());
+        
         
         ksession.dispose();
 
