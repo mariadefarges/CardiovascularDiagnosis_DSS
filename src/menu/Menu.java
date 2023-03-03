@@ -33,8 +33,8 @@ public class Menu {
         boolean decreasedPulse = true;
     
         
-        boolean shortnessOfBreath = true;
-        boolean tiredness = true;
+        boolean shortnessOfBreath = false;
+        boolean tiredness = false;
     
         boolean increasedPulse = true;
         boolean headache = true;
@@ -48,9 +48,9 @@ public class Menu {
         boolean weakness = true;
         
         //constraint attributes
-        boolean irregularHeartBeat = true;
+        boolean irregularHeartBeat = false;
         boolean legsSwealing = true;
-        boolean chestPain = true;
+        boolean chestPain = false;
         
         KieSession ksession = kc.newKieSession("CardiovascularDiagnosisKS");
         Patient p1 = new Patient(chestPain, sweating, nausea, legsPain, skinChanges, decreasedPulse, legsSwealing,

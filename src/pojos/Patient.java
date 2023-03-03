@@ -27,6 +27,8 @@ public class Patient implements Serializable{
     private String background;
     private Condition conditions;
     private Disease disease;
+    private Doctor doctor;
+
 
     public Patient(Integer patientId, String name, String surname, String gender, Date birthDate, String weight, String bloodType, String background) {
         this.patientId = patientId;
@@ -113,6 +115,14 @@ public class Patient implements Serializable{
 
     public void setBackground(String background) {
         this.background = background;
+    }
+    
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
+
+    public Doctor getDoctor() {
+        return doctor;
     }
 
     @Override

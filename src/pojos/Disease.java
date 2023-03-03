@@ -13,6 +13,7 @@ import java.util.logging.Logger;
  */
 public class Disease {
     
+    private int diseaseId;
     private double myocardialInfarction;
     private double heartFailure ;
     private double pArterialDisease;
@@ -41,6 +42,13 @@ public class Disease {
         this.arrythmia = 0;
     }
 
+    public void setDiseaseId(int diseaseId) {
+        this.diseaseId = diseaseId;
+    }
+
+    public int getDiseaseId() {
+        return diseaseId;
+    }
     public double getMyocardialInfarction() {
         return myocardialInfarction;
     }

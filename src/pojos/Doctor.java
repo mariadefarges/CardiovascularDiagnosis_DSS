@@ -16,7 +16,7 @@ public class Doctor implements Serializable {
     
     private static final long serialVersionUID = -1L;
     
-    private final Integer patientId;
+    private final Integer doctorId;
     private String name;
     private String surname;
     private String gender;
@@ -25,8 +25,8 @@ public class Doctor implements Serializable {
     private String password;
     private List<Patient> patients;
 
-    public Doctor(Integer patientId, String name, String surname, String gender, String hospital, String email, String password) {
-        this.patientId = patientId;
+    public Doctor(Integer doctorId, String name, String surname, String gender, String hospital, String email, String password) {
+        this.doctorId = doctorId;
         this.name = name;
         this.surname = surname;
         this.gender = gender;
@@ -35,8 +35,8 @@ public class Doctor implements Serializable {
         this.password = password;
     }
 
-    public Integer getPatientId() {
-        return patientId;
+    public Integer getDoctorId() {
+        return doctorId;
     }
 
     public String getName() {
@@ -82,7 +82,7 @@ public class Doctor implements Serializable {
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 83 * hash + Objects.hashCode(this.patientId);
+        hash = 83 * hash + Objects.hashCode(this.doctorId);
         hash = 83 * hash + Objects.hashCode(this.name);
         hash = 83 * hash + Objects.hashCode(this.surname);
         hash = 83 * hash + Objects.hashCode(this.gender);
@@ -122,12 +122,12 @@ public class Doctor implements Serializable {
         if (!Objects.equals(this.password, other.password)) {
             return false;
         }
-        return Objects.equals(this.patientId, other.patientId);
+        return Objects.equals(this.doctorId, other.doctorId);
     }
 
     @Override
     public String toString() {
-        return "Doctor{" + "patientId=" + patientId + ", name=" + name + ", surname=" + surname + ", gender=" + gender + ", hospital=" + hospital + ", email=" + email + ", password=" + password + '}';
+        return "Doctor{" + "doctorId=" + doctorId + ", name=" + name + ", surname=" + surname + ", gender=" + gender + ", hospital=" + hospital + ", email=" + email + ", password=" + password + '}';
     }
     
     
