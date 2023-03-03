@@ -18,11 +18,13 @@ public class Patient implements Serializable{
     private static final long serialVersionUID = -1L;
     
     private int patientId;
+
+  
     private String name;
     private String surname;
     private String gender;
     private Date birthDate;
-    private String weight;
+    private Float weight;
     private String bloodType;
     private String background;
     private Condition conditions;
@@ -30,7 +32,7 @@ public class Patient implements Serializable{
     private Doctor doctor;
 
 
-    public Patient(Integer patientId, String name, String surname, String gender, Date birthDate, String weight, String bloodType, String background) {
+    public Patient(Integer patientId, String name, String surname, String gender, Date birthDate, Float weight, String bloodType, String background) {
         this.patientId = patientId;
         this.name = name;
         this.surname = surname;
@@ -45,7 +47,7 @@ public class Patient implements Serializable{
     public Patient(boolean chestPain, boolean sweating, boolean nausea, boolean legsPain, 
             boolean skinChanges, boolean decreasedPulse, boolean swellingLegs, 
             boolean shortnessOfBreath, boolean fatigue, boolean increasedPulse, 
-            boolean headache, boolean dizziness, boolean upperBodyPain, boolean palpitations, boolean temperatureChanges,
+            boolean headache, boolean dizziness, boolean upperBodyPain, boolean temperatureChanges,
             boolean highBloodPressure, boolean irregularHeartBeat, boolean weakness){
         this.conditions = new Condition();
         this.disease = new Disease();
@@ -62,7 +64,6 @@ public class Patient implements Serializable{
         this.conditions.setHeadache(headache);
         this.conditions.setDizziness(dizziness);
         this.conditions.setUpperBodyPain(upperBodyPain);
-        this.conditions.setPalpitations(palpitations);
         this.conditions.setTemperatureChanges(temperatureChanges);
         this.conditions.setHighBloodPressure(highBloodPressure);
         this.conditions.setIrregularHeartBeat(irregularHeartBeat);
@@ -101,11 +102,11 @@ public class Patient implements Serializable{
         this.gender = gender;
     }
 
-    public String getWeight() {
+    public Float getWeight() {
         return weight;
     }
 
-    public void setWeight(String weight) {
+    public void setWeight(Float weight) {
         this.weight = weight;
     }
 
@@ -123,6 +124,26 @@ public class Patient implements Serializable{
 
     public Doctor getDoctor() {
         return doctor;
+    }
+    
+     public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public void setBloodType(String bloodType) {
+        this.bloodType = bloodType;
+    }
+
+    public int getPatientId() {
+        return patientId;
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public String getBloodType() {
+        return bloodType;
     }
 
     @Override

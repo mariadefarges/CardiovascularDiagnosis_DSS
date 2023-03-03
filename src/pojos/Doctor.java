@@ -79,6 +79,11 @@ public class Doctor implements Serializable {
         this.password = password;
     }
 
+    public String getEmail() {
+        return email;
+    }
+    
+
     @Override
     public int hashCode() {
         int hash = 5;

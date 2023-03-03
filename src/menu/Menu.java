@@ -41,7 +41,6 @@ public class Menu {
         boolean dizziness = true;
     
         boolean neckShoulderBackPain = true;
-        boolean palpitations = true;
         boolean temperatureChanges = true;
         boolean highBloodPressure = true;
         
@@ -53,9 +52,11 @@ public class Menu {
         boolean chestPain = false;
         
         KieSession ksession = kc.newKieSession("CardiovascularDiagnosisKS");
-        Patient p1 = new Patient(chestPain, sweating, nausea, legsPain, skinChanges, decreasedPulse, legsSwealing,
-                        shortnessOfBreath, tiredness, increasedPulse, headache, dizziness, neckShoulderBackPain, palpitations,
-                        temperatureChanges, highBloodPressure, irregularHeartBeat, weakness);
+        Patient p1 = new Patient( chestPain,  sweating,  nausea,  legsPain, 
+             skinChanges,  decreasedPulse,  legsSwealing, 
+             shortnessOfBreath,  tiredness,  increasedPulse, 
+             headache,  dizziness,  neckShoulderBackPain,  temperatureChanges,
+             highBloodPressure,  irregularHeartBeat,  weakness);
         
         ksession.insert(p1);
         ksession.fireAllRules();

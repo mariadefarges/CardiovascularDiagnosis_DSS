@@ -11,7 +11,7 @@ package pojos;
 public class Condition {
     
 
-    private final Integer conditionId;
+    private Integer conditionId;
     
     private boolean chestPain;
     private boolean sweating;
@@ -34,6 +34,30 @@ public class Condition {
     private boolean highBloodPressure;
     private boolean irregularHeartBeat;
     private boolean weakness;
+
+    public Condition(boolean chestPain, boolean sweating, boolean nausea, boolean legsPain, boolean skinChanges, boolean decreasedPulse, boolean swellingLegs, boolean shortnessOfBreath, boolean fatigue, boolean increasedPulse, boolean headache, boolean dizziness, boolean upperBodyPain, boolean temperatureChanges, boolean highBloodPressure, boolean irregularHeartBeat, boolean weakness) {
+        
+        this.chestPain = chestPain;
+        this.sweating = sweating;
+        this.nausea = nausea;
+        this.legsPain = legsPain;
+        this.skinChanges = skinChanges;
+        this.decreasedPulse = decreasedPulse;
+        this.swellingLegs = swellingLegs;
+        this.shortnessOfBreath = shortnessOfBreath;
+        this.fatigue = fatigue;
+        this.increasedPulse = increasedPulse;
+        this.headache = headache;
+        this.dizziness = dizziness;
+        this.upperBodyPain = upperBodyPain;
+        this.temperatureChanges = temperatureChanges;
+        this.highBloodPressure = highBloodPressure;
+        this.irregularHeartBeat = irregularHeartBeat;
+        this.weakness = weakness;
+    }
+
+ 
+    
 
     public void setTemperatureChanges(boolean temperatureChanges) {
         this.temperatureChanges = temperatureChanges;
@@ -74,7 +98,6 @@ public class Condition {
     public boolean isUpperBodyPain() {
         return upperBodyPain;
     }
-    private boolean palpitations;
 
     public Condition() {
         this.conditionId = null;
@@ -104,9 +127,6 @@ public class Condition {
         return dizziness;
     }
 
-    public boolean isPalpitations() {
-        return palpitations;
-    }
 
     public void setSweating(boolean sweating) {
         this.sweating = sweating;
@@ -128,11 +148,8 @@ public class Condition {
         this.dizziness = dizziness;
     }
 
-    public void setPalpitations(boolean palpitations) {
-        this.palpitations = palpitations;
-    }
     
-        public void setChestPain(boolean chestPain) {
+    public void setChestPain(boolean chestPain) {
         this.chestPain = chestPain;
     }
 

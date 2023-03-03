@@ -103,4 +103,5 @@ public class JDBCManager {
         stmt.executeUpdate(sql);
         System.out.println("Tables created");
     }
+    
 }

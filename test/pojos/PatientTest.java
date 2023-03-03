@@ -125,7 +125,7 @@ public class PatientTest {
         System.out.println("getWeight");
         Patient instance = null;
         String expResult = "";
-        String result = instance.getWeight();
+        Float result = instance.getWeight();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -137,7 +137,7 @@ public class PatientTest {
     @Test
     public void testSetWeight() {
         System.out.println("setWeight");
-        String weight = "";
+        Float weight = null;
         Patient instance = null;
         instance.setWeight(weight);
         // TODO review the generated test code and remove the default call to fail.
