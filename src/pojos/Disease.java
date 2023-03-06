@@ -14,15 +14,15 @@ import java.util.logging.Logger;
 public class Disease {
     
     private int diseaseId;
-    private double myocardialInfarction;
-    private double heartFailure ;
-    private double pArterialDisease;
-    private double heartBurn;
-    private double hypertension;
-    private double stroke;
-    private double arrythmia;
+    private int myocardialInfarction;
+    private int heartFailure ;
+    private int pArterialDisease;
+    private int heartBurn;
+    private int hypertension;
+    private int stroke;
+    private int arrythmia;
 
-    public Disease(double myocardialInfarction, double heartFailure, double pArterialDisease, double heartBurn, double hypertension, double stroke, double arrythmia) {
+    public Disease(int myocardialInfarction, int heartFailure, int pArterialDisease, int heartBurn, int hypertension, int stroke, int arrythmia) {
         this.myocardialInfarction = myocardialInfarction;
         this.heartFailure = heartFailure;
         this.pArterialDisease = pArterialDisease;
@@ -42,27 +42,83 @@ public class Disease {
         this.arrythmia = 0;
     }
 
+    public int getDiseaseId() {
+        return diseaseId;
+    }
+
+    public int getMyocardialInfarction() {
+        return myocardialInfarction;
+    }
+
+    public int getHeartFailure() {
+        return heartFailure;
+    }
+
+    public int getpArterialDisease() {
+        return pArterialDisease;
+    }
+
+    public int getHeartBurn() {
+        return heartBurn;
+    }
+
+    public int getHypertension() {
+        return hypertension;
+    }
+
+    public int getStroke() {
+        return stroke;
+    }
+
+    public int getArrythmia() {
+        return arrythmia;
+    }
+
     public void setDiseaseId(int diseaseId) {
         this.diseaseId = diseaseId;
     }
 
-    public int getDiseaseId() {
-        return diseaseId;
-    }
-    public double getMyocardialInfarction() {
-        return myocardialInfarction;
+    public void setMyocardialInfarction(int myocardialInfarction) {
+        this.myocardialInfarction = myocardialInfarction;
     }
 
-    public double getHeartFailure() {
-        return heartFailure;
+    public void setHeartFailure(int heartFailure) {
+        this.heartFailure = heartFailure;
+    }
+
+    public void setpArterialDisease(int pArterialDisease) {
+        this.pArterialDisease = pArterialDisease;
+    }
+
+    public void setHeartBurn(int heartBurn) {
+        this.heartBurn = heartBurn;
+    }
+
+    public void setHypertension(int hypertension) {
+        this.hypertension = hypertension;
+    }
+
+    public void setStroke(int stroke) {
+        this.stroke = stroke;
+    }
+
+    public void setArrythmia(int arrythmia) {
+        this.arrythmia = arrythmia;
     }
 
     @Override
-    public String toString() {
-        return "Disease{" + "myocardialInfarction=" + myocardialInfarction + ", heartFailure=" + heartFailure + ", pArterialSisease=" + pArterialDisease + ", heartBurn=" + heartBurn + ", hypertension=" + hypertension + ", stroke=" + stroke + ", arrythmia=" + arrythmia + '}';
+    public int hashCode() {
+        int hash = 3;
+        hash = 89 * hash + this.diseaseId;
+        hash = 89 * hash + this.myocardialInfarction;
+        hash = 89 * hash + this.heartFailure;
+        hash = 89 * hash + this.pArterialDisease;
+        hash = 89 * hash + this.heartBurn;
+        hash = 89 * hash + this.hypertension;
+        hash = 89 * hash + this.stroke;
+        hash = 89 * hash + this.arrythmia;
+        return hash;
     }
-
-   
 
     @Override
     public boolean equals(Object obj) {
@@ -76,6 +132,9 @@ public class Disease {
             return false;
         }
         final Disease other = (Disease) obj;
+        if (this.diseaseId != other.diseaseId) {
+            return false;
+        }
         if (this.myocardialInfarction != other.myocardialInfarction) {
             return false;
         }
@@ -97,67 +156,12 @@ public class Disease {
         return this.arrythmia == other.arrythmia;
     }
 
-    public void setMyocardialInfarction(double myocardialInfarction) {
-        this.myocardialInfarction = myocardialInfarction;
-    }
-
-    public void setHeartFailure(double heartFailure) {
-        this.heartFailure = heartFailure;
-    }
-
-    public void setpArterialDisease(double pArterialDisease) {
-        this.pArterialDisease = pArterialDisease;
-    }
-
-    public void setHeartBurn(double heartBurn) {
-        this.heartBurn = heartBurn;
-    }
-
-    public void setHypertension(double hypertension) {
-        this.hypertension = hypertension;
-    }
-
-    public void setStroke(double stroke) {
-        this.stroke = stroke;
-    }
-
-    public void setArrythmia(double arrythmia) {
-        this.arrythmia = arrythmia;
-    }
-
-    public double getpArterialDisease() {
-        return pArterialDisease;
-    }
-
-    public double getHeartBurn() {
-        return heartBurn;
-    }
-
-    public double getHypertension() {
-        return hypertension;
-    }
-
-    public double getStroke() {
-        return stroke;
-    }
-
-    public double getArrythmia() {
-        return arrythmia;
-    }
-
     @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.myocardialInfarction) ^ (Double.doubleToLongBits(this.myocardialInfarction) >>> 32));
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.heartFailure) ^ (Double.doubleToLongBits(this.heartFailure) >>> 32));
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.pArterialDisease) ^ (Double.doubleToLongBits(this.pArterialDisease) >>> 32));
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.heartBurn) ^ (Double.doubleToLongBits(this.heartBurn) >>> 32));
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.hypertension) ^ (Double.doubleToLongBits(this.hypertension) >>> 32));
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.stroke) ^ (Double.doubleToLongBits(this.stroke) >>> 32));
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.arrythmia) ^ (Double.doubleToLongBits(this.arrythmia) >>> 32));
-        return hash;
+    public String toString() {
+        return "Disease{" + "diseaseId=" + diseaseId + ", myocardialInfarction=" + myocardialInfarction + ", heartFailure=" + heartFailure + ", pArterialDisease=" + pArterialDisease + ", heartBurn=" + heartBurn + ", hypertension=" + hypertension + ", stroke=" + stroke + ", arrythmia=" + arrythmia + '}';
     }
 
+   
    
     
 

@@ -29,7 +29,6 @@ public class JDBCDiseaseManager implements DiseaseManager{
         prep.setInt(5, d.getHypertension());
         prep.setInt(6, d.getStroke());
         prep.setInt(7, d.getArrythmia());
-        prep.setInt();
         prep.close();
     }
 
@@ -42,13 +41,13 @@ public class JDBCDiseaseManager implements DiseaseManager{
         prep.setInt(1, diseaseId);
         ResultSet rs = prep.executeQuery();
         while (rs.next()) {
-            int myocardialInfarction = rs.setInt"myocardialInfarction");
-            int heartFailure = rs.setInt("heartFailure");
-            int pArterialDisease = rs.setInt("pArterialDisease");
-            int heartBurn = rs.setInt("heartBurn");
-            int hypertension = rs.setInt("hypertension");
-            int stroke = rs.setInt("stroke");
-            int arrythmia = rs.setInt("arrythmia");
+            int myocardialInfarction = rs.getInt("myocardialInfarction");
+            int heartFailure = rs.getInt("heartFailure");
+            int pArterialDisease = rs.getInt("pArterialDisease");
+            int heartBurn = rs.getInt("heartBurn");
+            int hypertension = rs.getInt("hypertension");
+            int stroke = rs.getInt("stroke");
+            int arrythmia = rs.getInt("arrythmia");
             
              d = new Disease(myocardialInfarction, heartFailure, pArterialDisease, heartBurn, hypertension,stroke, arrythmia);
         }
