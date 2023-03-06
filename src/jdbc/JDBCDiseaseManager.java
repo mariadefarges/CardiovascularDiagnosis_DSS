@@ -22,14 +22,14 @@ public class JDBCDiseaseManager implements DiseaseManager{
     public void addDisease(Disease d) throws SQLException {
         String sql = "INSERT INTO disease (myocardialInfarction, heartFailure, pArterialDisease, heartBurn,hypertension, stroke,arrythmia) VALUES (?,?,?,?,?,?,?)";
         PreparedStatement prep = manager.getConnection().prepareStatement(sql);
-        prep.setDouble(1, d.getMyocardialInfarction());
-        prep.setDouble(2, d.getHeartFailure());
-        prep.setDouble(3, d.getpArterialDisease());
-        prep.setDouble(4, d.getHeartBurn());
-        prep.setDouble(5, d.getHypertension());
-        prep.setDouble(6, d.getStroke());
-        prep.setDouble(7, d.getArrythmia());
-        prep.executeUpdate();
+        prep.setInt(1, d.getMyocardialInfarction());
+        prep.setInt(2, d.getHeartFailure());
+        prep.setInt(3, d.getpArterialDisease());
+        prep.setInt(4, d.getHeartBurn());
+        prep.setInt(5, d.getHypertension());
+        prep.setInt(6, d.getStroke());
+        prep.setInt(7, d.getArrythmia());
+        prep.setInt();
         prep.close();
     }
 
@@ -42,13 +42,13 @@ public class JDBCDiseaseManager implements DiseaseManager{
         prep.setInt(1, diseaseId);
         ResultSet rs = prep.executeQuery();
         while (rs.next()) {
-            Double myocardialInfarction = rs.getDouble("myocardialInfarction");
-            Double heartFailure = rs.getDouble("heartFailure");
-            Double pArterialDisease = rs.getDouble("pArterialDisease");
-            Double heartBurn = rs.getDouble("heartBurn");
-            Double hypertension = rs.getDouble("hypertension");
-            Double stroke = rs.getDouble("stroke");
-            Double arrythmia = rs.getDouble("arrythmia");
+            int myocardialInfarction = rs.setInt"myocardialInfarction");
+            int heartFailure = rs.setInt("heartFailure");
+            int pArterialDisease = rs.setInt("pArterialDisease");
+            int heartBurn = rs.setInt("heartBurn");
+            int hypertension = rs.setInt("hypertension");
+            int stroke = rs.setInt("stroke");
+            int arrythmia = rs.setInt("arrythmia");
             
              d = new Disease(myocardialInfarction, heartFailure, pArterialDisease, heartBurn, hypertension,stroke, arrythmia);
         }
