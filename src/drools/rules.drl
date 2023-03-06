@@ -21,7 +21,7 @@ rule "Chest pain 1"
     when
         p : Patient( p.getConditions().isChestPain() == true )
     then
-        p.getDisease().setMyocardialInfarction(p.getDisease().getMyocardialInfarction() + 0.5);
+        p.getDisease().setMyocardialInfarction(p.getDisease().getMyocardialInfarction() + 50);
         //System.out.println("Rule 1 Chest Pain applied over " + p);
         //System.out.println("R1 - Myocardial Infarction: " + p.getDisease().getMyocardialInfarction());
 end
@@ -31,7 +31,7 @@ rule "Chest pain 2"
     when
         p : Patient( p.getConditions().isChestPain() == true )
     then
-        p.getDisease().setHeartFailure(p.getDisease().getHeartFailure() + 0.3);
+        p.getDisease().setHeartFailure(p.getDisease().getHeartFailure() + 30);
         //System.out.println("Rule 2 Chest Pain applied over " + p);
         //System.out.println("R2 - Heart Failure: " + p.getDisease().getHeartFailure());
 end
@@ -41,7 +41,7 @@ rule "Chest pain 3"
     when
         p : Patient( p.getConditions().isChestPain() == true )
     then
-        p.getDisease().setpArterialDisease(p.getDisease().getpArterialDisease() + 0.3);
+        p.getDisease().setpArterialDisease(p.getDisease().getpArterialDisease() + 30);
         //System.out.println("Rule 3 Chest Pain applied over " + p);
         //System.out.println("R3 - Peripheral Arterial Disease: " + p.getDisease().getpArterialDisease());
 end
@@ -51,7 +51,7 @@ rule "Chest pain 4"
     when
         p : Patient( p.getConditions().isChestPain() == true )
     then
-        p.getDisease().setHeartBurn(p.getDisease().getHeartBurn() + 0.3);
+        p.getDisease().setHeartBurn(p.getDisease().getHeartBurn() + 30);
         //System.out.println("Rule 4 Chest Pain applied over " + p);
         //System.out.println("R4 - Heart Burn: " + p.getDisease().getHeartBurn());
 end
@@ -61,7 +61,7 @@ rule "Chest pain 5"
     when
         p : Patient( p.getConditions().isChestPain() == true )
     then
-        p.getDisease().setStroke(p.getDisease().getStroke() + 0.2);
+        p.getDisease().setStroke(p.getDisease().getStroke() + 20);
         //System.out.println("Rule 5 Chest Pain applied over " + p);
         //System.out.println("R5 - Stroke: " + p.getDisease().getStroke());
 end
@@ -71,7 +71,7 @@ rule "Chest pain 6"
     when
         p : Patient( p.getConditions().isChestPain() == true )
     then
-        p.getDisease().setArrythmia(p.getDisease().getArrythmia() + 0.2);
+        p.getDisease().setArrythmia(p.getDisease().getArrythmia() + 20);
         //System.out.println("Rule 6 Chest Pain applied over " + p);
         //System.out.println("R6 - Arrythmia: " + p.getDisease().getArrythmia());
 end
@@ -81,7 +81,7 @@ rule "Shortness Of Breath 7"
     when
         p : Patient( p.getConditions().isShortnessOfBreath() == true )
     then
-        p.getDisease().setMyocardialInfarction(p.getDisease().getMyocardialInfarction() + 0.3);
+        p.getDisease().setMyocardialInfarction(p.getDisease().getMyocardialInfarction() + 30);
         //System.out.println("Rule 7 Shortness Of Breath applied over " + p);
         //System.out.println("R7 - Myocardial Infarction: " + p.getDisease().getMyocardialInfarction());
 end
@@ -91,7 +91,7 @@ rule "Shortness Of Breath 8"
     when
         p : Patient( p.getConditions().isShortnessOfBreath() == true )
     then
-        p.getDisease().setHeartFailure(p.getDisease().getHeartFailure() + 0.2);
+        p.getDisease().setHeartFailure(p.getDisease().getHeartFailure() + 20);
         //System.out.println("Rule 8 Shortness Of Breath applied over " + p);
         //System.out.println("R8 - Heart Failure: " + p.getDisease().getHeartFailure());
 end
@@ -101,7 +101,7 @@ rule "Shortness Of Breath 9"
     when
         p : Patient( p.getConditions().isShortnessOfBreath() == true )
     then
-        p.getDisease().setHeartBurn(p.getDisease().getHeartBurn() + 0.4);
+        p.getDisease().setHeartBurn(p.getDisease().getHeartBurn() + 40);
         //System.out.println("Rule 9 Shortness Of Breath applied over " + p);
         //System.out.println("R9 - Heart Burn: " + p.getDisease().getHeartBurn());
 end
@@ -111,7 +111,7 @@ rule "Shortness Of Breath 10"
     when
         p : Patient( p.getConditions().isShortnessOfBreath() == true )
     then
-        p.getDisease().setStroke(p.getDisease().getStroke() + 0.1);
+        p.getDisease().setStroke(p.getDisease().getStroke() + 10);
         //System.out.println("Rule 10 Shortness Of Breath applied over " + p);
         //System.out.println("R10 - Stroke: " + p.getDisease().getStroke());
 end
@@ -121,7 +121,7 @@ rule "Shortness Of Breath 11"
     when
         p : Patient( p.getConditions().isShortnessOfBreath() == true )
     then
-        p.getDisease().setArrythmia(p.getDisease().getArrythmia() + 0.2);
+        p.getDisease().setArrythmia(p.getDisease().getArrythmia() + 20);
         //System.out.println("Rule 11 Shortness Of Breath applied over " + p);
         //System.out.println("R11 - Arrythmia: " + p.getDisease().getArrythmia());
 end
@@ -131,7 +131,7 @@ rule "Sweating 12"
     when
         p : Patient( p.getConditions().isSweating() == true )
     then
-        p.getDisease().setMyocardialInfarction(p.getDisease().getMyocardialInfarction() + 0.1);
+        p.getDisease().setMyocardialInfarction(p.getDisease().getMyocardialInfarction() + 10);
         //System.out.println("Rule 12 Shortness Of Breath applied over " + p);
         //System.out.println("R12 - Myocardial Infarction: " + p.getDisease().getMyocardialInfarction());
 end
@@ -141,7 +141,7 @@ rule "Nausea 13"
     when
         p : Patient( p.getConditions().isNausea() == true )
     then
-        p.getDisease().setMyocardialInfarction(p.getDisease().getMyocardialInfarction() + 0.1);
+        p.getDisease().setMyocardialInfarction(p.getDisease().getMyocardialInfarction() + 10);
         //System.out.println("Rule 13 Nausea applied over " + p);
         //System.out.println("R13 - Myocardial Infarction: " + p.getDisease().getMyocardialInfarction());
 end
@@ -151,7 +151,7 @@ rule "Swelling In Legs 14"
     when
         p : Patient( p.getConditions().isSwellingLegs() == true )
     then
-        p.getDisease().setHeartFailure(p.getDisease().getHeartFailure() + 0.4);
+        p.getDisease().setHeartFailure(p.getDisease().getHeartFailure() + 40);
         //System.out.println("Rule 14 Swelling In Legs " + p);
         //System.out.println("R14 - Heart Failure: " + p.getDisease().getHeartFailure());
 end
@@ -161,7 +161,7 @@ rule "Fatigue 15"
     when
         p : Patient( p.getConditions().isFatigue() == true )
     then
-        p.getDisease().setHeartFailure(p.getDisease().getHeartFailure() + 0.1);
+        p.getDisease().setHeartFailure(p.getDisease().getHeartFailure() + 10);
         //System.out.println("Rule 15 Fatigue " + p);
         //System.out.println("R15 - Heart Failure: " + p.getDisease().getHeartFailure());
 end
@@ -171,7 +171,7 @@ rule "Fatigue 16"
     when
         p : Patient( p.getConditions().isFatigue() == true )
     then
-        p.getDisease().setHeartBurn(p.getDisease().getHeartBurn() + 0.1);
+        p.getDisease().setHeartBurn(p.getDisease().getHeartBurn() + 10);
         //System.out.println("Rule 16 Fatigue " + p);
         //System.out.println("R16 - Heart Burn: " + p.getDisease().getHeartBurn());
 end
@@ -181,7 +181,7 @@ rule "Fatigue 17"
     when
         p : Patient( p.getConditions().isFatigue() == true )
     then
-        p.getDisease().setHypertension(p.getDisease().getHypertension() + 0.1);
+        p.getDisease().setHypertension(p.getDisease().getHypertension() + 10);
         //System.out.println("Rule 17 Fatigue " + p);
         //System.out.println("R17 - Hypertension: " + p.getDisease().getHypertension());
 end
@@ -191,7 +191,7 @@ rule "Fatigue 18"
     when
         p : Patient( p.getConditions().isFatigue() == true )
     then
-        p.getDisease().setArrythmia(p.getDisease().getArrythmia() + 0.1);
+        p.getDisease().setArrythmia(p.getDisease().getArrythmia() + 10);
         //System.out.println("Rule 18 Fatigue " + p);
         //System.out.println("R18 - Arrythmia: " + p.getDisease().getArrythmia());
 end
@@ -201,7 +201,7 @@ rule "Legs Pain 19"
     when
         p : Patient( p.getConditions().isLegsPain() == true )
     then
-        p.getDisease().setpArterialDisease(p.getDisease().getpArterialDisease() + 0.3);
+        p.getDisease().setpArterialDisease(p.getDisease().getpArterialDisease() + 30);
         //System.out.println("Rule 19 Legs Pain " + p);
         //System.out.println("R19 - Peripheral Arterial Disease: " + p.getDisease().getpArterialDisease());
 end
@@ -211,7 +211,7 @@ rule "Skin Changes 20"
     when
         p : Patient( p.getConditions().isSkinChanges() == true )
     then
-        p.getDisease().setpArterialDisease(p.getDisease().getpArterialDisease() + 0.1);
+        p.getDisease().setpArterialDisease(p.getDisease().getpArterialDisease() + 10);
         //System.out.println("Rule 20 Skin Changes " + p);
         //System.out.println("R20 - Peripheral Arterial Disease: " + p.getDisease().getpArterialDisease());
 end
@@ -221,7 +221,7 @@ rule "Temperature Changes 21"
     when
         p : Patient( p.getConditions().isTemperatureChanges() == true )
     then
-        p.getDisease().setpArterialDisease(p.getDisease().getpArterialDisease() + 0.1);
+        p.getDisease().setpArterialDisease(p.getDisease().getpArterialDisease() + 10);
         //System.out.println("Rule 21 Temperature Changes " + p);
         //System.out.println("R21 - Peripheral Arterial Disease: " + p.getDisease().getpArterialDisease());
 end
@@ -231,7 +231,7 @@ rule "Temperature Changes 22"
     when
         p : Patient( p.getConditions().isTemperatureChanges() == true )
     then
-        p.getDisease().setHypertension(p.getDisease().getHypertension() + 0.1);
+        p.getDisease().setHypertension(p.getDisease().getHypertension() + 10);
         //System.out.println("Rule 22 Temperature Changes " + p);
         //System.out.println("R22 - Hypertension: " + p.getDisease().getHypertension());
 end
@@ -241,7 +241,7 @@ rule "Decreased Pulse 23"
     when
         p : Patient( p.getConditions().isDecreasedPulse() == true )
     then
-        p.getDisease().setpArterialDisease(p.getDisease().getpArterialDisease() + 0.2);
+        p.getDisease().setpArterialDisease(p.getDisease().getpArterialDisease() + 20);
         //System.out.println("Rule 23 Decreased Pulse " + p);
         //System.out.println("R23 - Peripheral Arterial Disease: " + p.getDisease().getpArterialDisease());
 end
@@ -251,7 +251,7 @@ rule "Increased Pulse 24"
     when
         p : Patient( p.getConditions().isIncreasedPulse() == true )
     then
-        p.getDisease().setHeartBurn(p.getDisease().getHeartBurn() + 0.2);
+        p.getDisease().setHeartBurn(p.getDisease().getHeartBurn() + 20);
         //System.out.println("Rule 24 Increased Pulse " + p);
         //System.out.println("R24 - Heart Burn: " + p.getDisease().getHeartBurn());
 end
@@ -261,7 +261,7 @@ rule "High Blood Pressure 25"
     when
         p : Patient( p.getConditions().isHighBloodPressure() == true )
     then
-        p.getDisease().setHypertension(p.getDisease().getHypertension() + 0.4);
+        p.getDisease().setHypertension(p.getDisease().getHypertension() + 40);
         //System.out.println("Rule 25 High Blood Pressure " + p);
         //System.out.println("R25 - Hypertension: " + p.getDisease().getHypertension());
 end
@@ -271,7 +271,7 @@ rule "Irregular Heart Beat 26"
     when
         p : Patient( p.getConditions().isIrregularHeartBeat() == true )
     then
-        p.getDisease().setArrythmia(p.getDisease().getArrythmia() + 0.5);
+        p.getDisease().setArrythmia(p.getDisease().getArrythmia() + 50);
         //System.out.println("Rule 26 Irregular Heart Beat " + p);
         //System.out.println("R26 - Arrythmia: " + p.getDisease().getArrythmia());
 end
@@ -281,7 +281,7 @@ rule "Headache 27"
     when
         p : Patient( p.getConditions().isHeadache() == true )
     then
-        p.getDisease().setHypertension(p.getDisease().getHypertension() + 0.2);
+        p.getDisease().setHypertension(p.getDisease().getHypertension() + 20);
         //System.out.println("Rule 27 Hypertension " + p);
         //System.out.println("R27 - Hypertension: " + p.getDisease().getHypertension());
 end
@@ -291,7 +291,7 @@ rule "Dizziness 28"
     when
         p : Patient( p.getConditions().isDizziness() == true )
     then
-        p.getDisease().setHypertension(p.getDisease().getHypertension() + 0.1);
+        p.getDisease().setHypertension(p.getDisease().getHypertension() + 10);
         //System.out.println("Rule 28 Hypertension " + p);
         //System.out.println("R28 - Hypertension: " + p.getDisease().getHypertension());
 end
@@ -301,7 +301,7 @@ rule "Upper Body Pain 29"
     when
         p : Patient( p.getConditions().isUpperBodyPain() == true )
     then
-        p.getDisease().setStroke(p.getDisease().getStroke() + 0.5);
+        p.getDisease().setStroke(p.getDisease().getStroke() + 50);
         //System.out.println("Rule 29 Stroke " + p);
         //System.out.println("R29 - Stroke: " + p.getDisease().getStroke());
 end
@@ -311,7 +311,7 @@ rule "Weakness 30"
     when
         p : Patient( p.getConditions().isWeakness() == true )
     then
-        p.getDisease().setHypertension(p.getDisease().getHypertension() + 0.1);
+        p.getDisease().setHypertension(p.getDisease().getHypertension() + 10);
         //System.out.println("Rule 30 Hypertension " + p);
         //System.out.println("R30 - Hypertension: " + p.getDisease().getHypertension());
 end
@@ -321,7 +321,7 @@ rule "Weakness 31"
     when
         p : Patient( p.getConditions().isWeakness() == true )
     then
-        p.getDisease().setStroke(p.getDisease().getStroke() + 0.2);
+        p.getDisease().setStroke(p.getDisease().getStroke() + 20);
         //System.out.println("Rule 31 Stroke " + p);
         //System.out.println("R31 - Stroke: " + p.getDisease().getStroke());
 end
